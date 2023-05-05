@@ -1,0 +1,16 @@
+.eventCard{
+    position: relative;
+    border: 1px solid $NEUTRAL-300;
+    width: 500px;
+
+    .blackBar{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 12.5rem;
+        height: 12.5rem;
+        background-color: $SECONDARY-900;
+        z-index: -1;
+    }
+}
