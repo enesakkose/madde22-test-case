@@ -18,7 +18,7 @@ function Page({ params }: CategoryParamsTypes) {
 
   return (
     <MainContainer className={styles.categoryPage}>
-      {categoryEvents.map((event) => (
+      {EVENTS.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
     </MainContainer>
