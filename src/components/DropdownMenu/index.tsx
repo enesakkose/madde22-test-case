@@ -15,6 +15,20 @@ export const DropdownItem = ({
   return <li className={clsx(styles.item, className)}>{children}</li>
 }
 
+export const DropdownList = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode
+  className?: string
+}) => {
+  return(
+    <ul className={clsx(styles.dropdownList, className)}>
+      {children}
+    </ul>
+  )
+}
+
 type DropdownPropsTypes = {
   trigger: string | React.ReactNode
   children: React.ReactNode
@@ -24,6 +38,7 @@ export function DropdownMenu({ trigger, children }: DropdownPropsTypes) {
   const [open, setOpen] = useState(false)
   const dropdownListRef = useClickOutside<HTMLDivElement>(() => setOpen(false))
 
+
   return (
     <div ref={dropdownListRef} className={styles.dropdownMenu}>
       <Button
@@ -32,11 +47,7 @@ export function DropdownMenu({ trigger, children }: DropdownPropsTypes) {
       >
         {trigger}
       </Button>
-      {open && (
-        <ul className={styles.dropdownList}>
-          {children}
-        </ul>
-      )}
+      {open && <div className={styles.dropdownListContainer}>{children}</div>}
     </div>
   )
 }

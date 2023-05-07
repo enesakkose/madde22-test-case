@@ -10,7 +10,7 @@ type CategoryParamsTypes = {
 }
 
 function Page({ params }: CategoryParamsTypes) {
-  const categoryEvents = params?.category?.[0] 
+  const categoryEvents = params?.category?.[0] || params?.category?.[0] !== 'etkinlikler'
     ? EVENTS.filter(event => event.genre.replace(/\s/g, '').toLocaleLowerCase () === params.category [0]) 
     : EVENTS 
   //categoreEvents variables created for edit mock EVENTS data by category genre

@@ -1,7 +1,7 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import Button from '../UI/Button'
-import { DropdownMenu, DropdownItem } from '../DropdownMenu'
+import { DropdownMenu, DropdownItem, DropdownList } from '../DropdownMenu'
 import HeaderContainer from '@/containers/HeaderContainer'
 import { LOCATION, DATES } from '@/mock'
 import styles from './StickyHeader.module.scss'
@@ -11,8 +11,10 @@ function StickyHeader() {
   const CheckboxButton = ({ text }: { text: string }) => {
     return (
       <DropdownItem className={styles.toggleButton}>
-        <input type='checkbox' name='checkbox' />
-        <span>{text}</span>
+        <label>
+          <input type='checkbox' name='checkbox' />
+          <span>{text}</span>
+        </label>
       </DropdownItem>
     )
   }
@@ -30,15 +32,18 @@ function StickyHeader() {
     <div className={styles.stickyHeaderContainer}>
       <HeaderContainer className={styles.stickyHeader}>
         <DropdownMenu trigger={<DropdownTriggerButton />}>
-          <h4 className={styles.title}>{LOCATION.title}</h4>
-          {LOCATION.places.map((place) => (
-            <CheckboxButton key={place.id} text={place.place} />
-          ))}
-          <h4 className={styles.title}>{DATES.title}</h4>
-          {DATES.items.map((date) => (
-            <CheckboxButton key={date.id} text={date.date} />
-          ))}
-          <Button variant='primary'>Uygula</Button>
+          <DropdownList>
+            <h4 className={styles.title}>{LOCATION.title}</h4>
+            {LOCATION.places.map((place) => (
+              <CheckboxButton key={place.id} text={place.place} />
+            ))}
+          </DropdownList>
+          <DropdownList className={styles.datesList}>
+            <h4 className={styles.title}>{DATES.title}</h4>
+            {DATES.items.map((date) => (
+              <CheckboxButton key={date.id} text={date.date} />
+            ))}
+          </DropdownList>
         </DropdownMenu>
         <Button variant='icon' icon='calendar' size={24}>
           <span>Takvimde Gör</span>

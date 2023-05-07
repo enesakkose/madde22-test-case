@@ -1,5 +1,4 @@
-"use client"
-import React, { useState } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import Button from '@/components/UI/Button'
 import Icon from '@/components/UI/Icon'
@@ -13,7 +12,6 @@ type EventInfoPropsTypes = {
 }
 
 function EventInfo({ title, location, info, className }: EventInfoPropsTypes) {
-  const [ letter, setLetter ] = useState(20)
   return (
     <div className={styles.eventInfo}>
       <h3 className={clsx(styles.title, className)}>{title}</h3>
@@ -22,10 +20,13 @@ function EventInfo({ title, location, info, className }: EventInfoPropsTypes) {
         {location}
       </span>
       <p className={styles.text}>
-        {info.slice(0,letter)}
-      <Button className={styles.detailBtn} variant='underline' onClick={() => setLetter(info.length)}>
-        Detaylı Bilgi
-      </Button> 
+        {info}...
+        <Button
+          className={styles.detailBtn}
+          variant='underline'
+        >
+          Detaylı Bilgi
+        </Button>
       </p>
     </div>
   )

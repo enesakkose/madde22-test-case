@@ -1,6 +1,4 @@
 import React from 'react'
-import AddBtn from '../AddBtn'
-import Button from '../UI/Button'
 import EventImage from './EventImage'
 import EventInfo from './EventInfo'
 import ActionBtns from './ActionBtns'
@@ -22,7 +20,7 @@ function EventCard({ event }: { event: EVENT }) {
         info={event.info}
         location={event.location}
       />
-      <ActionBtns />
+      <ActionBtns id={event.id} />
     </div>
   )
 }

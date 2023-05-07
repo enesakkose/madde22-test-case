@@ -11,7 +11,7 @@ function Nav() {
 
   return (
     <nav className={styles.tabs}>
-      <NavLink active={null === segment} href='/'>
+      <NavLink active={'etkinlikler' === segment} href='/etkinlikler'>
         Tüm Etkinlikler
       </NavLink>
       <NavLink active={'tiyatro' === segment} href='/tiyatro'>

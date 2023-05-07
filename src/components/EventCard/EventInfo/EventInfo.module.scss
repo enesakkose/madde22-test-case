@@ -4,6 +4,10 @@
     justify-content: center;
     gap: 10px;
 
+    @media only screen and (max-width: $md){
+        padding-inline: $P-3;
+    }
+
     .location{
         display: flex;
         align-items: center;

@@ -11,12 +11,15 @@
         }
     }
 
-    .dropdownList{
+    .dropdownListContainer{
         position: absolute;
         top: 100%;
         padding: $P-4;
         background-color: $NEUTRAL-50;
         box-shadow: $EVENT-CARD-BOX-SHADOW;
+    }
+
+    .dropdownList{
         display: flex;
         flex-direction: column;
         gap: .5rem;
@@ -24,6 +27,7 @@
         li{
             padding-bottom: $P-0;
             border-bottom: 1px solid $NEUTRAL-100;
+            list-style: none;
 
             &:last-child{
                 border-bottom: none;
