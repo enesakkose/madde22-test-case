@@ -7,6 +7,7 @@ import styles from './Nav.module.scss'
 
 function Nav() {
   const segment = useSelectedLayoutSegment()
+  console.log(segment)
 
   return (
     <nav className={styles.tabs}>
