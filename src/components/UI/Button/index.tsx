@@ -1,8 +1,8 @@
 import React, { ReactNode, ButtonHTMLAttributes } from 'react'
 import clsx from 'clsx'
 import type { IconNameTypes } from '@/types'
-import styles from '@/components/Button/Button.module.scss'
-import Icon from '@/components/Icon'
+import Icon from '@/components/UI/Icon'
+import styles from './Button.module.scss'
 
 type ButtonTypes = {
   children?: ReactNode

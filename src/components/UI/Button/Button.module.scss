@@ -5,8 +5,6 @@
     align-items: center;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
-    //color: $SECONDARY-200;
-    //letter-spacing: .5px;
 
     &:disabled, &[disabled]{
         opacity: .5;
@@ -14,25 +12,26 @@
     }
 
     &:is(.primary){
-        padding: $P-1 $P-6;
+        padding: $P-0 $P-6;
         background-color: $PRIMARY-400;
         color: $NEUTRAL-50;
         font-weight: 700;
         transition: 200ms all ease-in-out;
         border: 1px solid $PRIMARY-400;
+        justify-content: center;
+        line-height: 1.75;
 
         &:hover{
             background-color: $NEUTRAL-50;
             color: $PRIMARY-400;
         }
+
+        @media only screen and (max-width: $md){
+            padding: $P-0 $P-5;
+        }
     }
 
     &.icon{
-        //padding: $P-2 $P-3;
-        //border-radius: .5rem;
-        //background-color: $SECONDARY-800;
-        //font-size: 13px;
-        //font-weight: 600;
         gap: .813rem;
         transition: 100ms color ease-in-out;
         
@@ -40,9 +39,6 @@
             color: $PRIMARY-400;
         }
 
-    }
-
-    &:is(.tertiary){
     }
 
     &:is(.underline){
