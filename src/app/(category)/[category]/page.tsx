@@ -10,16 +10,15 @@ type CategoryParamsTypes = {
 }
 
 function Page({ params }: CategoryParamsTypes) {
-  const categoryEvents = params?.category?.[0] 
-    ? EVENTS.filter(event => event.genre.replace(/\s/g, '').toLocaleLowerCase () === params.category [0]) 
+  const categoryEvents = params?.category !== 'etkinlikler'
+    ? EVENTS.filter(event => event.genre.replace(/\s/g, '').toLocaleLowerCase () === params.category) 
     : EVENTS 
   //categoreEvents variables created for edit mock EVENTS data by category genre
-  
-
+  if(categoryEvents.length === 0) return <NoData/>
 
   return (
     <MainContainer className={styles.categoryPage}>
-      {EVENTS.map((event) => (
+      {categoryEvents.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
     </MainContainer>
