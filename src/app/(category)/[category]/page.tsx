@@ -14,7 +14,8 @@ function Page({ params }: CategoryParamsTypes) {
     ? EVENTS.filter(event => event.genre.replace(/\s/g, '').toLocaleLowerCase () === params.category [0]) 
     : EVENTS 
   //categoreEvents variables created for edit mock EVENTS data by category genre
-  if(categoryEvents.length === 0) return <NoData/>
+  
+
 
   return (
     <MainContainer className={styles.categoryPage}>
