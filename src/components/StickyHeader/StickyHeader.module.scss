@@ -1,38 +1,41 @@
-.stickyHeader{
-    height: 3.25rem;
+.stickyHeaderContainer{
     background-color: $NEUTRAL-100;
-    padding-inline: $P-7;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index: 500;
 
-    @media only screen and (max-width: $md){
-        padding-inline: $P-2;
-    }
-
-    .toggleButton{
+    .stickyHeader{
+        padding-inline: 78px;
         display: flex;
         align-items: center;
-        gap: .625rem;
+        justify-content: space-between;
+        height: 3.25rem;
+    
 
-        .checkbox{
-            width: 20px;
-            height: 20px;
-            border: 1px solid $NEUTRAL-300;
-            position: relative;
+        @media only screen and (max-width: $md){
+            padding-inline: $P-2;
+        }
+
+        .toggleButton{
+            display: flex;
+            align-items: center;
+            gap: .625rem;
+
+            .checkbox{
+                width: 20px;
+                height: 20px;
+                border: 1px solid $NEUTRAL-300;
+                position: relative;
 
             .selectedCheckbox{
                 position: absolute;
                 inset: 0;
             }
-
         }
     }
 
-    h4{
-        margin-bottom: $M-0;
+        .title{
+            margin-bottom: $M-0;
+        }
     }
 }

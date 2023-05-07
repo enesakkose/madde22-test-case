@@ -5,6 +5,16 @@
     place-items: center;
 
     @media only screen and (max-width: $md){
-        display: none;
+        overflow: scroll;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding-inline: $P-2;
+
+        //scrollbar-width: none; //firefox
+
+        /*&::-webkit-scrollbar{
+            display: none;
+        }*/
     }
 }

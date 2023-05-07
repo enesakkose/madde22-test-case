@@ -3,4 +3,8 @@
     align-self: flex-end;
     grid-column: 2;
     gap: 1.875rem;
+
+    a{
+        width: max-content
+    }
 }
