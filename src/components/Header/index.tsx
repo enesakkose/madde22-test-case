@@ -7,6 +7,7 @@ function Header() {
   return (
     <header className={styles.header}>
       <Nav />
+      <Search />
     </header>
   )
 }

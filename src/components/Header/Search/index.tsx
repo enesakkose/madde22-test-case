@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Search.module.scss'
-import Icon from '../../Icon'
+import Icon from '../../UI/Icon'
 
 function Search() {
   return (

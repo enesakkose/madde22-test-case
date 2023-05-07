@@ -1,6 +1,6 @@
-"use client"
+'use client'
 import React, { useState } from 'react'
-import Button from '../Button'
+import Button from '../UI/Button'
 
 function AddBtn() {
   const [added, setAdded] = useState(false)
@@ -10,7 +10,7 @@ function AddBtn() {
     <Button
       icon={added ? 'added' : 'add'}
       size={26}
-      onClick={() => setAdded(prev => !prev)}
+      onClick={() => setAdded((prev) => !prev)}
     >
       {buttonText}
     </Button>

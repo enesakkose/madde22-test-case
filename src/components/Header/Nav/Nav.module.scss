@@ -1,5 +1,6 @@
 .tabs{
     display: flex;
-    gap: 1.875rem;
     align-self: flex-end;
+    grid-column: 2;
+    gap: 1.875rem;
 }

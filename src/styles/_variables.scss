@@ -1,3 +1,4 @@
+//COLOR
 $PRIMARY-50: #ffe3ef;
 $PRIMARY-100: #feb8d6;
 $PRIMARY-200: #fe89bb;
@@ -42,18 +43,29 @@ $ORANGE-700: #ffce69;
 $ORANGE-800: #fcb861;
 $ORANGE-900: #f19653;
 
+//BOX-SHADOW
+$EVENT-CARD-BOX-SHADOW: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+//MEDIA BREAKPOINTS
+$sm: 640px;
+$md: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+$P-0: 0.563rem;
 $P-1: .75rem;
-$P-2: 1.5rem;
+$P-2: 1.125rem;
 $P-3: 1.625rem;
 $P-4: 2rem;
 $P-5: 2.5rem;
-$P-6: 3.5rem;
-$P-7: 5rem;
+$P-6: 3.188rem;
+$P-7: 3.75rem;
 
-$M-1: .75rem;
-$M-2: 1.5rem;
+$M-0: .75rem;
+$M-1: 1rem;
+$M-2: 1.125rem;
 $M-3: 1.625rem;
-$M-4: 2rem;
+$M-4: 2.25rem;
 $M-5: 2.5rem;
 $M-6: .5rem;
 $M-7: 5rem;

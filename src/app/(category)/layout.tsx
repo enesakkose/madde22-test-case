@@ -5,17 +5,15 @@ import StickyHeader from '@/components/StickyHeader'
 
 type CategoryLayoutPropsTypes = {
   children: React.ReactNode
-  params: { category: string }
 }
 
-function CategoryLayout({ children, params}: CategoryLayoutPropsTypes) {
-  console.log(params.category)
+function CategoryLayout({ children }: CategoryLayoutPropsTypes) {
   return (
     <>
-    <TopBar title={params.category}/>
-    <Header/>
-    <StickyHeader/>
-    {children}
+      <TopBar />
+      <Header />
+      <StickyHeader />
+      {children}
     </>
   )
 }
