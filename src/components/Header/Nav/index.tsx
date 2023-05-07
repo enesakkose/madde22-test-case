@@ -10,15 +10,21 @@ function Nav() {
 
   return (
     <nav className={styles.tabs}>
-      {TABS.map((tab) => (
-        <NavLink
-          key={tab.tab}
-          active={tab.segment === segment}
-          href={tab.href}
-        >
-          {tab.tab}
-        </NavLink>
-      ))}
+      <NavLink active={null === segment} href='/'>
+        Tüm Etkinlikler
+      </NavLink>
+      <NavLink active={'tiyatro' === segment} href='/tiyatro'>
+        Tiyatro
+      </NavLink>
+      <NavLink active={'konser' === segment} href='/konser'>
+        Konser
+      </NavLink>
+      <NavLink active={'standup' === segment} href='/standup'>
+        Stand Up
+      </NavLink>
+      <NavLink active={'cocuk' === segment} href='/cocuk'>
+        Çocuk
+      </NavLink>
     </nav>
   )
 }
