@@ -1,0 +1,33 @@
+.dropdownMenu{
+
+    .trigger{
+        display: flex;
+        align-items: center;
+        gap: .813rem;
+        transition: 100ms color ease-in-out;
+        
+        &:hover{
+            color: $PRIMARY-400;
+        }
+    }
+
+    .dropdownList{
+        position: absolute;
+        top: 100%;
+        padding: $P-4;
+        background-color: $NEUTRAL-50;
+        box-shadow: $EVENT-CARD-BOX-SHADOW;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        li{
+            padding-bottom: $P-0;
+            border-bottom: 1px solid $NEUTRAL-100;
+
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
