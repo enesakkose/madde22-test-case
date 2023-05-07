@@ -5,6 +5,7 @@
     align-items: center;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
+    color: $SECONDARY-900;
 
     &:disabled, &[disabled]{
         opacity: .5;
