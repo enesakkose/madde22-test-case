@@ -1,0 +1,74 @@
+.eventImage{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $SECONDARY-900;
+        width: 12.5rem;
+    }
+
+    
+    .date{
+        color: $PRIMARY-400;
+        z-index: 3;
+        width: 2rem;
+        text-align: center;
+        margin-inline: $M-4;
+        position: relative;
+    }
+
+    .imgContainer{
+        width: 19.25rem;
+        height: 10.75rem;
+        position: relative;
+        
+        .genre{
+            position: absolute;
+            top: 1rem;
+            left: -1rem;
+            font-size: 14px;
+            font-weight: 700;
+            padding-inline: 20px;
+            background-color: #f19653;
+            color: $NEUTRAL-50;
+            line-height: 1.5;
+        }
+    }
+
+    @media only screen and (max-width: $md){
+        flex-direction: column;
+
+        &::before{
+            width: 100%;
+            bottom: 1rem;
+            right: 0;
+        }
+
+        .date{
+            width: 100%;
+            color: $NEUTRAL-50;
+            margin-block: $M-2;
+            letter-spacing: 1px;
+
+            &::first-word{
+                font-weight: 700;
+            }
+        }
+
+        .imgContainer{
+            position: unset;
+            z-index: 10;
+
+            .genre{
+                left: -1.125rem;
+                top: 1.125rem;
+            }
+        }
+    }
+}

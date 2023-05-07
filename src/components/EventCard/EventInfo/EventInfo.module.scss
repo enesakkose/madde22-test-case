@@ -1,0 +1,18 @@
+.eventInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    .location{
+        display: flex;
+        align-items: center;
+        color: $NEUTRAL-500;
+    }
+
+    .text{
+        .detailBtn{
+            display: inline-block;
+        }
+    }
+}

@@ -1,16 +1,28 @@
 import React from 'react'
 import AddBtn from '../AddBtn'
-import Button from '../Button'
+import Button from '../UI/Button'
+import EventImage from './EventImage'
+import EventInfo from './EventInfo'
+import ActionBtns from './ActionBtns'
+import type { EVENT } from '@/types'
 import styles from './EventCard.module.scss'
 
-function EventCard() {
+function EventCard({ event }: { event: EVENT }) {
   return (
     <div className={styles.eventCard}>
-      <div className={styles.blackBar}/>
-      <div className={styles.actionBtns}>
-        <Button variant='primary'>Bilet Al</Button>
-        <AddBtn/>
-      </div>
+      <EventImage
+        genreColor={event.genreColor}
+        image={event.image}
+        date={event.date}
+        genre={event.genre}
+      />
+      <EventInfo
+        className={styles.title} //for hover effect
+        title={event.title}
+        info={event.info}
+        location={event.location}
+      />
+      <ActionBtns />
     </div>
   )
 }

@@ -1,16 +1,24 @@
 .eventCard{
-    position: relative;
+    --column: 2fr 2fr 1fr;
     border: 1px solid $NEUTRAL-300;
-    width: 500px;
+    display: grid;
+    grid-template-columns: var(--column);
+    gap: 16px;
+    min-height: 200px;
+    cursor: default;
 
-    .blackBar{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 12.5rem;
-        height: 12.5rem;
-        background-color: $SECONDARY-900;
-        z-index: -1;
+    @media only screen and (max-width: $md){
+        --column: 1fr;
+        padding-bottom: $P-2;
+    }
+    
+    &:hover{
+        transition: 200ms box-shadow ease-in-out;
+        box-shadow: $EVENT-CARD-BOX-SHADOW;
+
+        .title{
+            transition: 200ms color ease-in-out;
+            color: $ORANGE-900;
+        }
     }
 }
